@@ -10,7 +10,20 @@ body {
     background-color: #ff6347;
 }
 
+.line-separator {
+    width: 70%;
+    height: 1px;
+    background-color: #333;
+    margin: 1rem auto;
+}
+
 /* Navbar Styles */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -110,4 +123,41 @@ body {
 
 .navbar-contact a:hover {
     color: #ff6347;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 80%;
+    height: auto;
+}
+
+.hero {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-content {
+    text-align: center;
+    width: 80%;
+}
+
+.hero .hero-content .hero-text {
+    margin-top: 0.5rem;
 }
