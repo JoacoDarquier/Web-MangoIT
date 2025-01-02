@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mango IT</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,7 +17,7 @@
             </div>
             <ul class="navbar-links">
                 <li><a href="#what-do" class="hvr-float-shadow">¿Que Hacemos?</a></li>
-                <li><a href="#services" class="hvr-float-shadow">Servicios</a></li>
+                <li><a href="#our-works" class="hvr-float-shadow">Nuestros trabajos</a></li>
                 <li><a href="#about-us" class="hvr-float-shadow">Acerca de Nosotros</a></li>
             </ul>
             <div class="navbar-contact">
@@ -39,7 +41,7 @@
     <div class="line-separator"></div>
 
     <section id="what-do" class="what-do">
-        <div class="what-do-header">
+        <div class="mango-header">
             <h2>¿Que Hacemos?</h2>
         </div>
         <div class="what-do-content">
@@ -63,5 +65,80 @@
 
     <div class="line-separator"></div>
 
+    <section id="our-works" class="our-works">
+        <div class="mango-header">
+            <h2>Nuestros Trabajos</h2>
+        </div>
+        <div class="our-works-content">
+
+            <div class="flex justify-center mt-4">
+                <ul id="tabs" class="flex space-x-4 text-lg font-semibold text-gray-500 border-b border-gray-300 dark:border-gray-700">
+                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="desarrollo-web">
+                        Desarrollo Web
+                    </li>
+                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="mobile-apps">
+                        Mobile Apps
+                    </li>
+                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="mango-ia">
+                        Mango IA
+                    </li>
+                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="mango-nacci">
+                        MangoNacci
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mt-6">
+                <div id="desarrollo-web" class="tab-content active">
+                    <img src="assets/web.jpg" alt="Desarrollo Web" class="rounded-lg shadow-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">Desarrollo-Web</h3>
+                    <p class="mt-2 text-white-600 dark:text-white-300">
+                        Desarrollamos sitios web a medida, con diseños modernos y funcionales, optimizados para ofrecer la mejor experiencia de usuario en cualquier dispositivo.
+                    </p>
+                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
+                        Ver Proyectos <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            
+                <div id="mobile-apps" class="tab-content hidden">
+                    <img src="assets/mobile.jpg" alt="Mobile Apps" class="rounded-lg shadow-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">Mobile-Apps</h3>
+                    <p class="mt-2 text-white-600 dark:text-white-300">
+                        Creamos aplicaciones móviles personalizadas, diseñadas para ofrecer experiencias fluidas y eficientes en iOS y Android, adaptadas a las necesidades de cada cliente.
+                    </p>
+                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
+                        Ver Proyectos <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            
+                <div id="mango-ia" class="tab-content hidden">
+                    <img src="assets/mango-ia.jpg" alt="Mango IA" class="rounded-lg shadow-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">Mango IA</h3>
+                    <p class="mt-2 text-white-600 dark:text-white-300">
+                        Desarrollamos aplicaciones inteligentes basadas en IA que automatizan procesos, mejoran la eficiencia y brindan soluciones innovadoras.
+                    </p>
+                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
+                        Ver Proyectos <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            
+                <div id="mango-nacci" class="tab-content hidden">
+                    <img src="assets/mango-fibonacci.jpg" alt="MangoNacci" class="rounded-lg shadow-lg">
+                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">MangoNacci</h3>
+                    <p class="mt-2 text-white-600 dark:text-white-300">
+                        Desarrollo de herramientas financieras, ayudando a empresas e inversores a tomar decisiones más eficientes y optimizar su rendimiento en el mercado.
+                    </p>
+                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
+                        Ver Proyectos <i class="fas fa-search"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="line-separator"></div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

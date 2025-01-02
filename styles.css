@@ -125,7 +125,7 @@ header {
     color: #ff6347;
 }
 
-/* Hero Section */
+/* What Do Section */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -169,7 +169,7 @@ header {
     justify-content: center;
 }
 
-.what-do-header {
+.mango-header {
     text-align: center;
     height: 10%;
     display: flex;
@@ -177,7 +177,7 @@ header {
     align-items: center;
 }
 
-.what-do-header h2 {
+.mango-header h2 {
     font-size: 2rem;
 }
 
@@ -212,4 +212,36 @@ header {
 
 .cards p {
     margin: 0.3rem;
+}
+
+/* Our Works Section */
+
+.our-works {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}	
+
+.our-works-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: 100%;
+}
+
+.our-works-content img {
+    width: 35%;
+    height: auto;
+}
+
+.our-works-content p {
+    width: 40%;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
