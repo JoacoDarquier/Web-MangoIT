@@ -179,6 +179,7 @@ header {
 
 .mango-header h2 {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .what-do-content {
@@ -225,8 +226,8 @@ header {
 .our-works-content {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -244,4 +245,47 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* About Us Section */
+
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.about-us-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about-us-content img {
+    width: 40%;
+    height: auto;
+}
+
+.section-title {
+    display: flex;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-text{
+    margin: 1rem;
+    background-color: #1E3E62;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.about-us-text h3 {
+    font-size: 1.5rem;
+}
+
+.about-us-text ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Optional: Adds some padding to align the bullets */
 }
