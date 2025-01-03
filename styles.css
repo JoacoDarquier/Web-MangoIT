@@ -289,3 +289,22 @@ header {
     list-style-type: disc;
     padding-left: 20px; /* Optional: Adds some padding to align the bullets */
 }
+
+/* Contact Form Section*/
+
+.bg-custom {
+    background-color: #1E3E62;
+}
+
+.btn-custom {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #162d4a;
+}
