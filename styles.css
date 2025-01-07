@@ -23,6 +23,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
 }
 
 .navbar {
@@ -30,7 +31,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: #0B192C;
-    padding: 10px 20px;
+    padding: 0.5rem;
     margin: 0.3rem;
     border-radius: 50px;
 }
@@ -114,6 +115,10 @@ header {
     transform: translateY(5px);
 }
 
+.navbar-contact {
+    padding-right: 1rem;
+}
+
 .navbar-contact a {
     text-decoration: none;
     color: white;
@@ -125,7 +130,7 @@ header {
     color: #ff6347;
 }
 
-/* What Do Section */
+/* Index Section */
 .hero-section {
     display: flex;
     justify-content: center;
@@ -158,9 +163,16 @@ header {
     width: 80%;
 }
 
+.hero .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 .hero .hero-content .hero-text {
     margin-top: 0.5rem;
 }
+
+/* What Do Section */
 
 .what-do {
     height: 100vh;
@@ -183,14 +195,18 @@ header {
 }
 
 .what-do-content {
-    width: 100%;
-    height: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* Asegura que todas las tarjetas tengan la misma altura */
+    gap: 20px;
+    padding: 0 5rem; /* Añade un espacio entre las tarjetas */
 }
 
 .cards {
+    flex: 1; /* Permite que las tarjetas se expandan uniformemente */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido dentro de las tarjetas se distribuya uniformemente */
     width: 25%;
     height: auto;
     background-color: #1E3E62;
@@ -220,6 +236,7 @@ header {
 .our-works {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100vh;
 }	
 
@@ -228,7 +245,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+
 }
 
 .our-works-content img {
@@ -252,6 +269,8 @@ header {
 .about-us-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -259,7 +278,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
 .about-us-content img {
