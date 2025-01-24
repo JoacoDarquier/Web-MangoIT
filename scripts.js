@@ -1,3 +1,12 @@
+//Nabvar responsive
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarLinks = document.querySelector('.navbar-links');
+
+navbarToggler.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+});
+
+
 const tabs = document.querySelectorAll('.tab');
 const tabContents = document.querySelectorAll('.tab-content');
 
@@ -47,3 +56,4 @@ document.getElementById("contactForm").addEventListener("submit", async function
         alert("Error al enviar el correo. Inténtalo nuevamente más tarde.");
     }
 });
+
