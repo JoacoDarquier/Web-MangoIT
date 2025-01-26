@@ -1,9 +1,10 @@
 //Nabvar responsive
 const navbarToggler = document.querySelector('.navbar-toggler');
-const navbarLinks = document.querySelector('.navbar-links');
+const navbarLinksContainer = document.querySelector('.navbar-links-container'); // Selecciona el contenedor
 
 navbarToggler.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
+    // Alterna la clase 'active' para el contenedor completo
+    navbarLinksContainer.classList.toggle('active');
 });
 
 
