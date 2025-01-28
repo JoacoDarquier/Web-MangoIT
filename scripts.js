@@ -1,6 +1,6 @@
 //Nabvar responsive
 const navbarToggler = document.querySelector('.navbar-toggler');
-const navbarLinksContainer = document.querySelector('.navbar-links-container'); // Selecciona el contenedor
+const navbarLinksContainer = document.querySelector('.navbar-links-container');
 
 navbarToggler.addEventListener('click', () => {
     // Alterna la clase 'active' para el contenedor completo
@@ -13,22 +13,42 @@ const tabContents = document.querySelectorAll('.tab-content');
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        // Eliminar clases activas de todas las tabs
-        tabs.forEach(t => t.classList.remove('text-blue-600', 'border-blue-600'));
-        tabs.forEach(t => t.classList.add('hover:text-gray-700', 'hover:border-gray-400'));
+        // Remover clase active de todos los tabs
+        tabs.forEach(t => {
+            t.classList.remove('active');
+            t.querySelector('.tab-text').style.color = 'white';
+        });
 
-        // Ocultar todo el contenido
-        tabContents.forEach(content => content.classList.add('hidden'));
+        // Agregar clase active al tab clickeado
+        tab.classList.add('active');
+        tab.querySelector('.tab-text').style.color = 'white';
 
-        // Activar la tab seleccionada
-        tab.classList.add('text-blue-600', 'border-blue-600');
-        tab.classList.remove('hover:text-gray-700', 'hover:border-gray-400');
+        // Ocultar todos los contenidos
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            content.style.display = 'none';
+        });
 
-        // Mostrar el contenido asociado
-        const target = document.getElementById(tab.dataset.tab);
-        target.classList.remove('hidden');
+        // Mostrar el contenido correspondiente
+        const targetId = tab.getAttribute('data-tab');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+            targetContent.classList.add('active');
+            targetContent.style.display = 'block';
+            
+            // Agregar una pequeña demora para la animación
+            setTimeout(() => {
+                targetContent.style.opacity = '1';
+                targetContent.style.transform = 'translateY(0)';
+            }, 50);
+        }
     });
 });
+
+// Activar el primer tab por defecto
+if (tabs.length > 0) {
+    tabs[0].click();
+}
 
 /* Form */ 
 document.getElementById("contactForm").addEventListener("submit", async function(event) {
@@ -57,4 +77,35 @@ document.getElementById("contactForm").addEventListener("submit", async function
         alert("Error al enviar el correo. Inténtalo nuevamente más tarde.");
     }
 });
+
+// Scroll Reveal
+function reveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', reveal);
+
+// Animación del navbar al hacer scroll
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+    const navbar = document.querySelector('header');
+    
+    if (prevScrollpos > currentScrollPos) {
+        navbar.style.top = "0";
+    } else {
+        navbar.style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
 

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mango IT</title>
+    <title>MangoIT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -14,29 +15,28 @@
         <nav class="navbar">
             <div class="navbar-logo">
                 <img src="assets/logo.png" alt="Logo de oficial de MangoIT" class="logo">
-                <a href="#index" class="brand-name"><span style="color: #F14A00;">Mango</span><span style="color: #C62300;">IT</span></a>
+                <a href="#index" class="brand-name">MangoIT</a>
             </div>
 
-            <button class="navbar-toggler" type="button">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
             <div class="navbar-links-container">
                 <ul class="navbar-links">
-                    <li><a href="#what-do" class="hvr-float-shadow">¿Qué Hacemos?</a></li>
-                    <li><a href="#our-works" class="hvr-float-shadow">Nuestros trabajos</a></li>
-                    <li><a href="#about-us" class="hvr-float-shadow">Acerca de Nosotros</a></li>
+                    <li><a href="#what-do">¿Qué Hacemos?</a></li>
+                    <li><a href="#our-works">Nuestros trabajos</a></li>
+                    <li><a href="#about-us">Acerca de Nosotros</a></li>
                 </ul>
-            
                 <div class="navbar-contact">
-                    <a href="contact_form.html" class="hvr-float-shadow">Contacto</a>
+                    <a href="contact_form.html">Contacto</a>
                 </div>
             </div>
         </nav>
     </header>
     
     <!-- Hero Section -->
-    <section class="hero-section" id="index">
+    <section class="hero-section reveal" id="index">
         <div class="hero-image">
             <img src="assets/file.png" alt="Nuestro MangoIT caminando">
         </div>
@@ -51,9 +51,9 @@
     <div class="line-separator"></div>
 
     <!-- What Do Section -->
-    <section id="what-do" class="what-do">
+    <section id="what-do" class="what-do reveal">
         <div class="mango-header">
-            <h2>¿Que Hacemos?</h2>
+            <h2>¿Qué Hacemos?</h2>
         </div>
         <div class="what-do-content">
             <div class="cards">
@@ -77,81 +77,103 @@
     <div class="line-separator"></div>
 
     <!-- Our Works Section -->
-    <section id="our-works" class="our-works">
+    <section id="our-works" class="our-works reveal">
         <div class="mango-header">
             <h2>Nuestros Trabajos</h2>
         </div>
         <div class="our-works-content">
-
             <div class="flex justify-center mt-4">
-                <ul id="tabs" class="flex space-x-4 text-lg font-semibold text-gray-500 border-b border-gray-300 dark:border-gray-700">
-                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="desarrollo-web">
-                        Desarrollo Web
+                <ul id="tabs" class="flex space-x-4 text-lg font-semibold">
+                    <li class="tab px-6 py-3 text-white cursor-pointer transition-all duration-300" data-tab="desarrollo-web">
+                        <span class="tab-text">Desarrollo Web</span>
                     </li>
-                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="mobile-apps">
-                        Mobile Apps
+                    <li class="tab px-6 py-3 text-white cursor-pointer transition-all duration-300" data-tab="mobile-apps">
+                        <span class="tab-text">Mobile Apps</span>
                     </li>
-                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="mango-ia">
-                        Mango IA
+                    <li class="tab px-6 py-3 text-white cursor-pointer transition-all duration-300" data-tab="mango-ia">
+                        <span class="tab-text">Mango IA</span>
                     </li>
-                    <li class="tab px-4 py-2 text-white hover:text-blue-500 cursor-pointer dark:hover:text-blue-300" data-tab="mango-nacci">
-                        MangoNacci
+                    <li class="tab px-6 py-3 text-white cursor-pointer transition-all duration-300" data-tab="mango-nacci">
+                        <span class="tab-text">MangoNacci</span>
                     </li>
                 </ul>
             </div>
             
-            <div class="mt-6">
+            <div class="mt-8 tab-contents">
                 <div id="desarrollo-web" class="tab-content active">
-                    <img src="assets/web.jpg" alt="Desarrollo Web" class="rounded-lg shadow-lg">
-                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">Desarrollo-Web</h3>
-                    <p class="mt-2 text-white-600 dark:text-white-300">
-                        Desarrollamos sitios web a medida, con diseños modernos y funcionales, optimizados para ofrecer la mejor experiencia de usuario en cualquier dispositivo.
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
-                        Ver Proyectos <i class="fas fa-search"></i>
-                    </a>
+                    <div class="content-wrapper">
+                        <div class="image-container">
+                            <img src="assets/web.jpg" alt="Desarrollo Web" class="content-image">
+                        </div>
+                        <div class="content-text">
+                            <h3>Desarrollo Web</h3>
+                            <p>
+                                Desarrollamos sitios web a medida, con diseños modernos y funcionales, optimizados para ofrecer la mejor experiencia de usuario en cualquier dispositivo.
+                            </p>
+                            <a href="#" class="project-link">
+                                Ver Proyectos <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             
                 <div id="mobile-apps" class="tab-content hidden">
-                    <img src="assets/mobile.jpg" alt="Mobile Apps" class="rounded-lg shadow-lg">
-                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">Mobile-Apps</h3>
-                    <p class="mt-2 text-white-600 dark:text-white-300">
-                        Creamos aplicaciones móviles personalizadas, diseñadas para ofrecer experiencias fluidas y eficientes en iOS y Android, adaptadas a las necesidades de cada cliente.
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
-                        Ver Proyectos <i class="fas fa-search"></i>
-                    </a>
+                    <div class="content-wrapper">
+                        <div class="image-container">
+                            <img src="assets/mobile.jpg" alt="Mobile Apps" class="content-image">
+                        </div>
+                        <div class="content-text">
+                            <h3>Mobile Apps</h3>
+                            <p>
+                                Creamos aplicaciones móviles personalizadas, diseñadas para ofrecer experiencias fluidas y eficientes en iOS y Android, adaptadas a las necesidades de cada cliente.
+                            </p>
+                            <a href="#" class="project-link">
+                                Ver Proyectos <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             
                 <div id="mango-ia" class="tab-content hidden">
-                    <img src="assets/mango-ia.jpg" alt="Mango IA" class="rounded-lg shadow-lg">
-                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">Mango IA</h3>
-                    <p class="mt-2 text-white-600 dark:text-white-300">
-                        Desarrollamos aplicaciones inteligentes basadas en IA que automatizan procesos, mejoran la eficiencia y brindan soluciones innovadoras.
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
-                        Ver Proyectos <i class="fas fa-search"></i>
-                    </a>
+                    <div class="content-wrapper">
+                        <div class="image-container">
+                            <img src="assets/mango-ia.jpg" alt="Mango IA" class="content-image">
+                        </div>
+                        <div class="content-text">
+                            <h3>Mango IA</h3>
+                            <p>
+                                Desarrollamos aplicaciones inteligentes basadas en IA que automatizan procesos, mejoran la eficiencia y brindan soluciones innovadoras.
+                            </p>
+                            <a href="#" class="project-link">
+                                Ver Proyectos <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             
                 <div id="mango-nacci" class="tab-content hidden">
-                    <img src="assets/mango-fibonacci.jpg" alt="MangoNacci" class="rounded-lg shadow-lg">
-                    <h3 class="mt-4 text-2xl font-bold text-white-800 dark:text-white-100">MangoNacci</h3>
-                    <p class="mt-2 text-white-600 dark:text-white-300">
-                        Desarrollo de herramientas financieras, ayudando a empresas e inversores a tomar decisiones más eficientes y optimizar su rendimiento en el mercado.
-                    </p>
-                    <a href="#" class="mt-4 inline-block text-lg text-blue-400 hover:text-blue-600 no-underline dark:text-blue-300 dark:hover:text-blue-500">
-                        Ver Proyectos <i class="fas fa-search"></i>
-                    </a>
+                    <div class="content-wrapper">
+                        <div class="image-container">
+                            <img src="assets/mango-fibonacci.jpg" alt="MangoNacci" class="content-image">
+                        </div>
+                        <div class="content-text">
+                            <h3>MangoNacci</h3>
+                            <p>
+                                Desarrollo de herramientas financieras, ayudando a empresas e inversores a tomar decisiones más eficientes y optimizar su rendimiento en el mercado.
+                            </p>
+                            <a href="#" class="project-link">
+                                Ver Proyectos <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
     <div class="line-separator"></div>
 
-    <section class="about-us-section" id="about-us">
+    <section class="about-us-section reveal" id="about-us">
         <div class="mango-header">
             <h2>Acerca de Nosotros</h2>
         </div>
@@ -189,23 +211,29 @@
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white flex justify-between items-center p-2">
-        <div class="flex items-center space-x-2">
-            <img src="assets/favicon.ico" alt="Logo de MangoIT" class="w-10 h-10">
-            <span class="text-sm hover:text-blue-500">
-                © 2024-2025 <span class="text-orange-500 font-semibold">MangoIT</span>
+    <footer class="bg-gray-800 text-white flex justify-between items-center p-4">
+        <div class="flex items-center space-x-3">
+            <img src="assets/favicon.ico" alt="Logo de MangoIT" class="w-12 h-12 hover:scale-110 transition-transform duration-300">
+            <span class="text-sm group">
+                © 2024-2025 
+                <span class="text-orange-500 font-semibold group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-red-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    MangoIT
+                </span>
             </span>
         </div>
         
-        <div class="flex space-x-6">
-            <a href="https://www.instagram.com/_mangoit/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram" style="color: #ffffff; font-size: 1.5rem;"></i>
+        <div class="flex space-x-8">
+            <a href="https://www.instagram.com/_mangoit/" target="_blank" rel="noopener noreferrer" 
+                class="social-icon instagram-icon transform hover:scale-110 transition-all duration-300">
+                <i class="fab fa-instagram text-2xl"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter-square" style="color: #ffffff; font-size: 1.5rem;"></i>
+            <a href="https://x.com/_mangoIT" target="_blank" rel="noopener noreferrer"
+                class="social-icon twitter-icon transform hover:scale-110 transition-all duration-300">
+                <i class="fab fa-twitter-square text-2xl"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin" style="color: #ffffff; font-size: 1.5rem;"></i>
+            <a href="https://www.linkedin.com/company/man6oit" target="_blank" rel="noopener noreferrer"
+                class="social-icon linkedin-icon transform hover:scale-110 transition-all duration-300">
+                <i class="fab fa-linkedin text-2xl"></i>
             </a>
         </div>
     </footer>
