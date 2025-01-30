@@ -58,7 +58,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     const data = Object.fromEntries(formData.entries());
 
     try {
-        const response = await fetch("http://localhost:3000/send-email", { // Cambia la URL a la correcta
+        const response = await fetch("https://www.mangoit.com.ar/send-email", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
