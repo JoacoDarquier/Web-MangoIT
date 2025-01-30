@@ -50,9 +50,9 @@ if (tabs.length > 0) {
     tabs[0].click();
 }
 
-/* Form */ 
+/* Form
 document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
+    //event.preventDefault();
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
@@ -76,7 +76,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
         console.error("Error al enviar el correo:", error);
         alert("Error al enviar el correo. Inténtalo nuevamente más tarde.");
     }
-});
+});*/ 
 
 // Scroll Reveal
 function reveal() {
