@@ -923,3 +923,20 @@ html::-webkit-scrollbar {
 .scrollable-content::-webkit-scrollbar {
     display: none;
 }
+
+.language-selector {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.language-selector a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.language-selector a:hover {
+    color: var(--primary-color);
+}
