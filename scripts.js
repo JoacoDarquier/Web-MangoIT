@@ -109,3 +109,12 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
+        max: 5,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+        scale: 1.02
+    });
+});
